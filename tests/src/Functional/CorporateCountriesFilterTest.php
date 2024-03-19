@@ -22,7 +22,6 @@ class CorporateCountriesFilterTest extends BrowserTestBase {
     'views',
     'views_ui',
     'field',
-    'field_ui',
     'address',
     'oe_corporate_countries',
     'oe_corporate_countries_test',
