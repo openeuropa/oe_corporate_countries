@@ -52,10 +52,12 @@ class AvailableCountriesSubscriber implements EventSubscriberInterface {
     // If no available countries are passed, default it to all available ones.
     if (empty($available_countries)) {
       $available_countries = array_column($this->corporateCountryRepository->getCountries(), 'alpha-2');
+      $available_countries = array_combine($available_countries, $available_countries);
     }
 
     // Extract the alpha-2 of all deprecated countries.
     $deprecated_countries = array_column($this->corporateCountryRepository->getDeprecatedCountries(), 'alpha-2');
+    $deprecated_countries = array_combine($deprecated_countries, $deprecated_countries);
 
     // Exclude all the deprecated countries from availability.
     $event->setAvailableCountries(array_diff($available_countries, $deprecated_countries));

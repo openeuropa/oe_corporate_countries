@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Implements uninstall procedures for the oe_corporate_countries_test module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function oe_corporate_countries_test_uninstall() {
+
+  $content_type = 'oe_countries';
+
+  // Delete all nodes of given content type.
+  $storage_handler = \Drupal::entityTypeManager()
+    ->getStorage('node');
+  $nodes = $storage_handler->loadByProperties(['type' => $content_type]);
+  $storage_handler->delete($nodes);
+
+  // Delete content type.
+  $entity_type = \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->load($content_type);
+  $entity_type->delete();
+}
