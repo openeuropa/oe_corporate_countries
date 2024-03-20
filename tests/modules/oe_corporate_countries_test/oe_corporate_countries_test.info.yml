@@ -1,0 +1,9 @@
+name: 'OpenEuropa Corporate Countries address test'
+type: module
+description: 'Provides functionality for testing the OpenEuropa Corporate Countries address module.'
+package: Testing
+core_version_requirement: ^10
+dependencies:
+  - oe_corporate_countries:oe_corporate_countries
+  - address:address
+  - drupal:views
