@@ -1,7 +1,13 @@
-# Changelog
+# Change Log
+
+## [2.0.1](https://github.com/openeuropa/oe_corporate_countries/tree/2.0.1) (2024-05-07)
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.0.0...2.0.1)
+
+**Merged pull requests:**
+
+- Contribution/oes 2019 [\#40](https://github.com/openeuropa/oe_corporate_countries/pull/40) ([pierregermain](https://github.com/pierregermain))
 
 ## [2.0.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.0.0) (2024-02-15)
-
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.0.0-alpha8...2.0.0)
 
 **Closed issues:**
@@ -10,10 +16,10 @@
 
 **Merged pull requests:**
 
+- Release-2.0.0: Update changlog. [\#37](https://github.com/openeuropa/oe_corporate_countries/pull/37) ([nagyad](https://github.com/nagyad))
 - EWPP-3973: Add Drupal 10.2.x and PHP 8.2 to matrix. [\#36](https://github.com/openeuropa/oe_corporate_countries/pull/36) ([brummbar](https://github.com/brummbar))
 
 ## [2.0.0-alpha8](https://github.com/openeuropa/oe_corporate_countries/tree/2.0.0-alpha8) (2023-04-06)
-
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.0.0-alpha7...2.0.0-alpha8)
 
 **Merged pull requests:**
