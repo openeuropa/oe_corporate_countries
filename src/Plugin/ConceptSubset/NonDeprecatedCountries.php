@@ -31,7 +31,7 @@ class NonDeprecatedCountries extends ConceptSubsetPluginBase implements Predicat
   /**
    * {@inheritdoc}
    */
-  public function alterQuery(QueryInterface $query, $match_operator, array $concept_schemes = [], string $match = NULL): void {
+  public function alterQuery(QueryInterface $query, $match_operator, array $concept_schemes = [], ?string $match = NULL): void {
     $query->condition('deprecated', ['false', '0'], 'IN');
   }
 
