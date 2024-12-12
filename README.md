@@ -26,11 +26,11 @@ This depends on the following software:
 
 ## Installation
 
-This module indirectly depends on the [drupal/sparql_entity_storage](https://www.drupal.org/project/sparql_entity_storage) module, which requires a more updated version of `easyrdf/easyrdf` package.\
+This module indirectly depends on the [drupal/sparql_entity_storage](https://www.drupal.org/project/sparql_entity_storage) module, which requires the `sweetrdf/easyrdf` package.\
 First the correct version of this package should be installed:
 
 ```bash
-composer require "easyrdf/easyrdf 0.10.0-alpha.1 as 0.9.2"
+composer require "sweetrdf/easyrdf:^1.7.1"
 ```
 
 Then install this package and its dependencies:
