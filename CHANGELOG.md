@@ -1,5 +1,13 @@
 # Change Log
 
+## [2.1.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.1.0) (2024-12-16)
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.0.1...2.1.0)
+
+**Merged pull requests:**
+
+- EWPP-4986: Update README regarding installation requirements. [\#43](https://github.com/openeuropa/oe_corporate_countries/pull/43) ([22Alexandra](https://github.com/22Alexandra))
+- OEL-3038: Update to Drupal 10.3. [\#42](https://github.com/openeuropa/oe_corporate_countries/pull/42) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
+
 ## [2.0.1](https://github.com/openeuropa/oe_corporate_countries/tree/2.0.1) (2024-05-07)
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.0.0...2.0.1)
 
