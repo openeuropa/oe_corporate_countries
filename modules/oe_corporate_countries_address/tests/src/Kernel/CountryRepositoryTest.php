@@ -140,7 +140,7 @@ class CountryRepositoryTest extends CorporateCountriesRdfKernelTestBase {
     $entity_repository_mock
       ->expects($this->exactly(2))
       ->method('getTranslationFromContext')
-      ->withConsecutive(
+      ->willReturnOnConsecutiveCalls(
         [new IsInstanceOf(ConceptInterface::class), 'en'],
         [new IsInstanceOf(ConceptInterface::class), 'fr']
       )
