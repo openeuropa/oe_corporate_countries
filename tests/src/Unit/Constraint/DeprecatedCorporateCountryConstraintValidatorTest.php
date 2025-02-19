@@ -90,7 +90,7 @@ class DeprecatedCorporateCountryConstraintValidatorTest extends UnitTestCase {
    * @return array
    *   A list of test case data.
    */
-  public function validateDataProvider(): array {
+  public static function validateDataProvider(): array {
     return [
       'deprecated country' => [
         'DC',
@@ -116,7 +116,7 @@ class DeprecatedCorporateCountryConstraintValidatorTest extends UnitTestCase {
    * @return array
    *   A list of test case data.
    */
-  public function validationSkippedDataProvider(): array {
+  public static function validationSkippedDataProvider(): array {
     return [
       'null value' => [NULL],
       'empty string value' => [''],
