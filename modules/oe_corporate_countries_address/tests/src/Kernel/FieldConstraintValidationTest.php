@@ -52,16 +52,16 @@ class FieldConstraintValidationTest extends CorporateCountriesRdfKernelTestBase 
     $entity->set('field_test', 'XY');
     $violations = $entity->validate();
     $this->assertCount(1, $violations);
-    $this->assertEquals('The country <em class="placeholder">&quot;XY&quot;</em> is not valid.', $violations[0]->getMessage());
+    $this->assertEquals('The country <em class="placeholder">&quot;XY&quot;</em> is not valid.', (string) $violations[0]->getMessage());
     $this->assertEquals('field_test.0.value', $violations[0]->getPropertyPath());
 
     // Setting a deprecated country will trigger a deprecation error.
     $entity->set('field_test', 'AN');
     $violations = $entity->validate();
     $this->assertCount(2, $violations);
-    $this->assertEquals('The country "<em class="placeholder">AN</em>" is deprecated. Please specify a replacement.', $violations[0]->getMessage());
+    $this->assertEquals('The country "<em class="placeholder">AN</em>" is deprecated. Please specify a replacement.', (string) $violations[0]->getMessage());
     $this->assertEquals('field_test.0.value', $violations[0]->getPropertyPath());
-    $this->assertEquals('The country <em class="placeholder">&quot;AN&quot;</em> is not available.', $violations[1]->getMessage());
+    $this->assertEquals('The country <em class="placeholder">&quot;AN&quot;</em> is not available.', (string) $violations[1]->getMessage());
     $this->assertEquals('field_test.0.value', $violations[0]->getPropertyPath());
 
     // Valid country values do not trigger any error.
@@ -90,7 +90,7 @@ class FieldConstraintValidationTest extends CorporateCountriesRdfKernelTestBase 
     ]);
     $violations = $entity->validate();
     $this->assertCount(1, $violations);
-    $this->assertEquals('The country <em class="placeholder">&quot;XY&quot;</em> is not valid.', $violations[0]->getMessage());
+    $this->assertEquals('The country <em class="placeholder">&quot;XY&quot;</em> is not valid.', (string) $violations[0]->getMessage());
     $this->assertEquals('field_test.0.country_code', $violations[0]->getPropertyPath());
 
     // Setting a deprecated country will trigger a deprecation error.
@@ -103,9 +103,9 @@ class FieldConstraintValidationTest extends CorporateCountriesRdfKernelTestBase 
     ]);
     $violations = $entity->validate();
     $this->assertCount(2, $violations);
-    $this->assertEquals('The country "<em class="placeholder">AN</em>" is deprecated. Please specify a replacement.', $violations[0]->getMessage());
+    $this->assertEquals('The country "<em class="placeholder">AN</em>" is deprecated. Please specify a replacement.', (string) $violations[0]->getMessage());
     $this->assertEquals('field_test.0.country_code', $violations[0]->getPropertyPath());
-    $this->assertEquals('The country <em class="placeholder">&quot;AN&quot;</em> is not available.', $violations[1]->getMessage());
+    $this->assertEquals('The country <em class="placeholder">&quot;AN&quot;</em> is not available.', (string) $violations[1]->getMessage());
     $this->assertEquals('field_test.0.country_code', $violations[0]->getPropertyPath());
 
     // Valid country values do not trigger any error.
