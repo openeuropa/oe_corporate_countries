@@ -43,7 +43,7 @@ It is strongly recommended to use the provisioned Docker image for Virtuoso that
 
 ```
   sparql:
-    image: openeuropa/triple-store-dev
+    image: registry.fpfis.eu/fpfis/triple-store
     environment:
     - SPARQL_UPDATE=true
     - DBA_PASSWORD=dba
