@@ -1,10 +1,25 @@
 # Change Log
 
+## [2.3.1](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.0) (2025-05-02)
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.0...2.3.1)
+
+**Merged pull requests:**
+
+- EWPP-5461: Update sparql image in docker-compose.yml and for drone.yml. [\#50](https://github.com/openeuropa/oe_corporate_countries/pull/50) ([sergepavle](https://github.com/sergepavle))
+
+## [2.3.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.0) (2025-03-17)
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.2.0...2.3.0)
+
+**Merged pull requests:**
+
+- EWPP-4634: D11 update [\#48](https://github.com/openeuropa/oe_corporate_countries/pull/48) ([piotrsmykaj](https://github.com/piotrsmykaj))
+
 ## [2.2.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.2.0) (2025-01-28)
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.1.0...2.2.0)
 
 **Merged pull requests:**
 
+- Release-2.2.0: Update changelog. [\#46](https://github.com/openeuropa/oe_corporate_countries/pull/46) ([nagyad](https://github.com/nagyad))
 - EWPP-4991: Ensure PHP8.3 compatibility. [\#45](https://github.com/openeuropa/oe_corporate_countries/pull/45) ([nagyad](https://github.com/nagyad))
 
 ## [2.1.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.1.0) (2024-12-16)
