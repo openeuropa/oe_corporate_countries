@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
-## [2.3.1](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.0) (2025-05-02)
+## [2.3.2](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.2) (2025-06-18)
+
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.1...2.3.2)
+
+**Merged pull requests:**
+
+- EWPP-5553: Update sparql image in docker-compose.yml and .drone.yml. [\#52](https://github.com/openeuropa/oe_corporate_countries/pull/52) ([sergepavle](https://github.com/sergepavle))
+
+## [2.3.1](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.1) (2025-05-05)
+
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.0...2.3.1)
 
 **Merged pull requests:**
