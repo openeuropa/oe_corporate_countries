@@ -1,11 +1,22 @@
 # Changelog
 
+## [2.3.3](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.3) (2025-09-09)
+
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.2...2.3.3)
+
+**Merged pull requests:**
+
+- EWPP-5981: Use github actions for CI. [\#56](https://github.com/openeuropa/oe_corporate_countries/pull/56) ([hernani](https://github.com/hernani))
+- EWPP-5820: Move rdf\_skos to drupal gitlab. [\#55](https://github.com/openeuropa/oe_corporate_countries/pull/55) ([nagyad](https://github.com/nagyad))
+- EWPP-5768: Update to Drupal 10.5. [\#54](https://github.com/openeuropa/oe_corporate_countries/pull/54) ([intelektron](https://github.com/intelektron))
+
 ## [2.3.2](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.2) (2025-06-18)
 
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.1...2.3.2)
 
 **Merged pull requests:**
 
+- Release-2.3.2: Update changelog and docker PHP images. [\#53](https://github.com/openeuropa/oe_corporate_countries/pull/53) ([nagyad](https://github.com/nagyad))
 - EWPP-5553: Update sparql image in docker-compose.yml and .drone.yml. [\#52](https://github.com/openeuropa/oe_corporate_countries/pull/52) ([sergepavle](https://github.com/sergepavle))
 
 ## [2.3.1](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.1) (2025-05-05)
@@ -14,6 +25,7 @@
 
 **Merged pull requests:**
 
+- 2.3.1: Update changelog. [\#51](https://github.com/openeuropa/oe_corporate_countries/pull/51) ([nagyad](https://github.com/nagyad))
 - EWPP-5461: Update sparql image in docker-compose.yml and for drone.yml. [\#50](https://github.com/openeuropa/oe_corporate_countries/pull/50) ([sergepavle](https://github.com/sergepavle))
 
 ## [2.3.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.0) (2025-03-17)
