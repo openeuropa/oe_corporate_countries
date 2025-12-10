@@ -20,7 +20,17 @@ use Drupal\sparql_entity_storage\SparqlEntityStorageFieldHandlerInterface;
  *   description = @Translation("Filters out deprecated countries."),
  *   predicate_mapping = TRUE,
  *   concept_schemes = {
- *     "http://publications.europa.eu/resource/authority/country"
+ *     "http://publications.europa.eu/resource/authority/country",
+ *     "http://publications.europa.eu/resource/authority/country/0001",
+ *     "http://publications.europa.eu/resource/authority/country/0002",
+ *     "http://publications.europa.eu/resource/authority/country/0003",
+ *     "http://publications.europa.eu/resource/authority/country/0004",
+ *     "http://publications.europa.eu/resource/authority/country/0005",
+ *     "http://publications.europa.eu/resource/authority/country/0006",
+ *     "http://publications.europa.eu/resource/authority/country/0007",
+ *     "http://publications.europa.eu/resource/authority/country/0008",
+ *     "http://publications.europa.eu/resource/authority/country/0009",
+ *     "http://publications.europa.eu/resource/authority/country/0010"
  *   }
  * )
  */
