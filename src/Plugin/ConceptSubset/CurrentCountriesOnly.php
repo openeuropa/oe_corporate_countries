@@ -6,18 +6,16 @@ namespace Drupal\oe_corporate_countries\Plugin\ConceptSubset;
 
 use Drupal\Core\Entity\Query\QueryInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\rdf_skos\ConceptSubsetPluginBase;
 use Drupal\rdf_skos\Plugin\PredicateMapperInterface;
 use Drupal\sparql_entity_storage\SparqlEntityStorageFieldHandlerInterface;
 
 /**
- * Subset of the countries vocabulary with non-deprecated countries only.
+ * Subset of the countries vocabulary with countries only.
  *
  * @ConceptSubset(
- *   id = "non_deprecated_countries",
- *   label = @Translation("Non-deprecated countries"),
- *   description = @Translation("Filters out deprecated countries."),
+ *   id = "countries_only",
+ *   label = @Translation("Countries Only"),
+ *   description = @Translation("Filters out territories and deprecated countries."),
  *   predicate_mapping = TRUE,
  *   concept_schemes = {
  *     "http://publications.europa.eu/resource/authority/country",
@@ -34,15 +32,26 @@ use Drupal\sparql_entity_storage\SparqlEntityStorageFieldHandlerInterface;
  *   }
  * )
  */
-class NonDeprecatedCountries extends ConceptSubsetPluginBase implements PredicateMapperInterface {
-
-  use StringTranslationTrait;
+class CurrentCountriesOnly extends NonDeprecatedCountries implements PredicateMapperInterface {
 
   /**
    * {@inheritdoc}
    */
   public function alterQuery(QueryInterface $query, $match_operator, array $concept_schemes = [], ?string $match = NULL): void {
-    $query->condition('deprecated', ['false', '0'], 'IN');
+    // Filter out deprecated countries first.
+    parent::alterQuery($query, $match_operator, $concept_schemes, $match);
+    // Then filter by countries only.
+    $query->condition('countries_context', 'http://publications.europa.eu/resource/authority/use-context/COUNTRY');
+    // Exclude the 'Data Provisions' entry by workaround, as expected usage with
+    // context and filtering with AND logic by
+    // 'http://publications.europa.eu/resource/authority/use-context/COM_WEB'
+    // does not work due to 'Virtuoso 42000 Error The estimated execution time 0
+    // (sec) exceeds the limit of ...' error. For fixing described issue needs
+    // to optimize the SPARQL query generation in the SparqlEntityStorage
+    // module.
+    // @todo Optimize SPARQL query generation to remove this workaround.
+    $query->condition('id', 'http://publications.europa.eu/resource/authority/country/OP_DATPRO', '!=');
+
   }
 
   /**
@@ -51,10 +60,10 @@ class NonDeprecatedCountries extends ConceptSubsetPluginBase implements Predicat
   public function getPredicateMapping(): array {
     $mapping = [];
 
-    $mapping['deprecated'] = [
+    $mapping['countries_context'] = [
       'column' => 'value',
-      'predicate' => ['http://publications.europa.eu/ontology/authority/deprecated'],
-      'format' => SparqlEntityStorageFieldHandlerInterface::NON_TYPE,
+      'predicate' => ['http://lemon-model.net/lemon#context'],
+      'format' => SparqlEntityStorageFieldHandlerInterface::RESOURCE,
     ];
 
     return $mapping;
@@ -66,9 +75,9 @@ class NonDeprecatedCountries extends ConceptSubsetPluginBase implements Predicat
   public function getBaseFieldDefinitions(): array {
     $fields = [];
 
-    $fields['deprecated'] = BaseFieldDefinition::create('string')
-      ->setLabel($this->t('Deprecated'))
-      ->setDescription($this->t('Whether the country is deprecated or not.'))
+    $fields['countries_context'] = BaseFieldDefinition::create('string')
+      ->setLabel($this->t('Context'))
+      ->setDescription($this->t('Context in which a term is to be used.'))
       ->setCardinality(1);
 
     return $fields;
