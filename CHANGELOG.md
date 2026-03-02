@@ -1,11 +1,22 @@
 # Changelog
 
+## [2.3.4](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.4) (2026-03-02)
+
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.3...2.3.4)
+
+**Merged pull requests:**
+
+- EWPP-6339: Cache docker images for GitHub actions. [\#63](https://github.com/openeuropa/oe_corporate_countries/pull/63) ([nagyad](https://github.com/nagyad))
+- EWPP-6261: Bump composer/installers to 2.x. [\#60](https://github.com/openeuropa/oe_corporate_countries/pull/60) ([nagyad](https://github.com/nagyad))
+- EWPP-6069: Add Drupal 11.2 support. [\#58](https://github.com/openeuropa/oe_corporate_countries/pull/58) ([nagyad](https://github.com/nagyad))
+
 ## [2.3.3](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.3) (2025-09-09)
 
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.2...2.3.3)
 
 **Merged pull requests:**
 
+- Release-2.3.3: Update changelog. [\#57](https://github.com/openeuropa/oe_corporate_countries/pull/57) ([nagyad](https://github.com/nagyad))
 - EWPP-5981: Use github actions for CI. [\#56](https://github.com/openeuropa/oe_corporate_countries/pull/56) ([hernani](https://github.com/hernani))
 - EWPP-5820: Move rdf\_skos to drupal gitlab. [\#55](https://github.com/openeuropa/oe_corporate_countries/pull/55) ([nagyad](https://github.com/nagyad))
 - EWPP-5768: Update to Drupal 10.5. [\#54](https://github.com/openeuropa/oe_corporate_countries/pull/54) ([intelektron](https://github.com/intelektron))
