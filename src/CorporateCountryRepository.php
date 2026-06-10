@@ -69,7 +69,7 @@ class CorporateCountryRepository implements CorporateCountryRepositoryInterface 
     }
 
     $query = <<<SPARQL
-SELECT DISTINCT ?id, ?authcode, ?deprecated
+SELECT DISTINCT ?id ?authcode ?deprecated
 $from_graphs
 WHERE {
   ?id <http://www.w3.org/2004/02/skos/core#inScheme> <http://publications.europa.eu/resource/authority/country> .
@@ -77,7 +77,7 @@ WHERE {
   ?id <http://publications.europa.eu/ontology/authority/authority-code> ?authcode .
   ?id <http://publications.europa.eu/ontology/authority/deprecated> ?deprecated .
 }
-ORDER BY asc(?authcode)
+ORDER BY ASC(?authcode)
 SPARQL;
 
     $results = $this->sparql->query($query);
