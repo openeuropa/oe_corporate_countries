@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.5](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.5) (2026-07-01)
+
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.4...2.3.5)
+
+**Merged pull requests:**
+
+- EWPP-5990: Fix syntax error in sparql query to make it compatible with fuseki. [\#59](https://github.com/openeuropa/oe_corporate_countries/pull/59) ([sergepavle](https://github.com/sergepavle))
+
 ## [2.3.4](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.4) (2026-03-02)
 
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.3...2.3.4)
