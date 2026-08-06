@@ -54,6 +54,13 @@
 
 - EWPP-4634: D11 update [\#48](https://github.com/openeuropa/oe_corporate_countries/pull/48) ([piotrsmykaj](https://github.com/piotrsmykaj))
 
+## [2.3.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.0) (2025-03-17)
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.2.0...2.3.0)
+
+**Merged pull requests:**
+
+- EWPP-4634: D11 update [\#48](https://github.com/openeuropa/oe_corporate_countries/pull/48) ([piotrsmykaj](https://github.com/piotrsmykaj))
+
 ## [2.2.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.2.0) (2025-01-28)
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.1.0...2.2.0)
 
