@@ -25,6 +25,15 @@ function oe_corporate_countries_install($is_syncing) {
   $manager->installFieldStorageDefinition('deprecated', 'skos_concept', 'rdf_skos', $definition);
   \Drupal::logger('oe_content')->info('The following SKOS field definition has been installed: @definition.', ['@definition' => 'deprecated']);
 
+  $definition = BaseFieldDefinition::create('string')
+    ->setLabel(t('Context'))
+    ->setDescription(t('Context in which a term is to be used.'))
+    ->setCardinality(1);
+
+  $manager->installFieldStorageDefinition('countries_context', 'skos_concept', 'rdf_skos', $definition);
+
+  \Drupal::logger('oe_content')->info('The following SKOS field definition has been installed: @definition.', ['@definition' => 'countries_context']);
+
   if ($is_syncing) {
     return;
   }
@@ -82,4 +91,25 @@ function oe_corporate_countries_update_8101(): TranslatableMarkup {
   $manager->installFieldStorageDefinition('deprecated', 'skos_concept', 'rdf_skos', $definition);
 
   return t('The following SKOS field definition has been installed: @definition.', ['@definition' => 'deprecated']);
+}
+
+/**
+ * Install the newly defined SKOS Concept defined fields.
+ */
+function oe_corporate_countries_update_9101(): TranslatableMarkup {
+  $manager = \Drupal::entityDefinitionUpdateManager();
+  $change_list = $manager->getChangeList();
+  $changed_definitions = $change_list['skos_concept']['field_storage_definitions'] ?? [];
+  if (!$changed_definitions || !isset($changed_definitions['countries_context']) || $changed_definitions['countries_context'] !== EntityDefinitionUpdateManager::DEFINITION_CREATED) {
+    return t('No SKOS field definitions had to be updated.');
+  }
+
+  $definition = BaseFieldDefinition::create('string')
+    ->setLabel(t('Context'))
+    ->setDescription(t('Context in which a term is to be used.'))
+    ->setCardinality(1);
+
+  $manager->installFieldStorageDefinition('countries_context', 'skos_concept', 'rdf_skos', $definition);
+
+  return t('The following SKOS field definition has been installed: @definition.', ['@definition' => 'countries_context']);
 }

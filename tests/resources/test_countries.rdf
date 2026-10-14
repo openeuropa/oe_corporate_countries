@@ -3,7 +3,8 @@
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
          xmlns:atold="http://publications.europa.eu/resource/authority/"
-         xmlns:at="http://publications.europa.eu/ontology/authority/">
+         xmlns:at="http://publications.europa.eu/ontology/authority/"
+         xmlns:ns7="http://lemon-model.net/lemon#">
   <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/country" at:table.id="country" at:table.version.number="20200318-0">
     <owl:versionInfo>20200318-0</owl:versionInfo>
     <rdfs:label xml:lang="en">Country</rdfs:label>
@@ -20,6 +21,8 @@
     <skos:prefLabel xml:lang="fr">Italie</skos:prefLabel>
     <skos:prefLabel xml:lang="it">Italia</skos:prefLabel>
     <skos:prefLabel xml:lang="pt">Itália</skos:prefLabel>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COUNTRY"/>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COM_WEB"/>
   </skos:Concept>
   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/country/BEL" at:deprecated="false" at:protocol.order="EU-01">
     <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/country"/>
@@ -32,6 +35,8 @@
     <skos:prefLabel xml:lang="fr">Belgique</skos:prefLabel>
     <skos:prefLabel xml:lang="it">Belgio</skos:prefLabel>
     <skos:prefLabel xml:lang="pt">Bélgica</skos:prefLabel>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COUNTRY"/>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COM_WEB"/>
   </skos:Concept>
   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/country/ANT" at:deprecated="true">
     <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/country"/>
@@ -45,6 +50,7 @@
     <skos:prefLabel xml:lang="fr">Antilles néerlandaises</skos:prefLabel>
     <skos:prefLabel xml:lang="it">Antille olandesi</skos:prefLabel>
     <skos:prefLabel xml:lang="pt">Antilhas Neerlandesas</skos:prefLabel>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COM_WEB"/>
   </skos:Concept>
   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/country/FQ0" at:deprecated="false">
     <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/country"/>
@@ -57,6 +63,7 @@
     <skos:prefLabel xml:lang="fr">Terres australes et antarctiques françaises</skos:prefLabel>
     <skos:prefLabel xml:lang="it">Terre australi e antartiche francesi</skos:prefLabel>
     <skos:prefLabel xml:lang="pt">Terras Austrais e Antárticas Francesas</skos:prefLabel>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COUNTRY"/>
   </skos:Concept>
   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/country/ALA" at:deprecated="false">
     <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/country"/>
@@ -69,6 +76,7 @@
     <skos:prefLabel xml:lang="fr">Îles Åland</skos:prefLabel>
     <skos:prefLabel xml:lang="it">Isole Åland</skos:prefLabel>
     <skos:prefLabel xml:lang="pt">Alanda</skos:prefLabel>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COM_WEB"/>
   </skos:Concept>
   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/country/1A0" at:deprecated="false">
     <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/country"/>
@@ -81,5 +89,19 @@
     <skos:prefLabel xml:lang="fr">Kosovo</skos:prefLabel>
     <skos:prefLabel xml:lang="it">Kosovo</skos:prefLabel>
     <skos:prefLabel xml:lang="pt">Kosovo</skos:prefLabel>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COM_WEB"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/country/OP_DATPRO" at:deprecated="false">
+    <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/country"/>
+    <at:authority-code>OP_DATPRO</at:authority-code>
+    <at:op-code>OP_DATPRO</at:op-code>
+    <dc:identifier>OP_DATPRO</dc:identifier>
+    <at:start.use>2008-02-17</at:start.use>
+    <skos:prefLabel xml:lang="de">Vorläufige Daten</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Provisional data</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Données provisoires</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Dati provvisori</skos:prefLabel>
+    <skos:prefLabel xml:lang="pt">Dados provisórios</skos:prefLabel>
+    <ns7:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/COUNTRY"/>
   </skos:Concept>
 </rdf:RDF>
