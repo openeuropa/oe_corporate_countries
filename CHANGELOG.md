@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.4.0](https://github.com/openeuropa/oe_corporate_countries/tree/2.4.0) (2026-10-14)
+
+[Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.5...2.4.0)
+
+**Merged pull requests:**
+
+- EWPP-6988: Trigger pipeline. [\#67](https://github.com/openeuropa/oe_corporate_countries/pull/67) ([nagyad](https://github.com/nagyad))
+- EWPP-3716: Add Subsets to handle new version of country vocabulary. [\#62](https://github.com/openeuropa/oe_corporate_countries/pull/62) ([sergepavle](https://github.com/sergepavle))
+
 ## [2.3.5](https://github.com/openeuropa/oe_corporate_countries/tree/2.3.5) (2026-07-01)
 
 [Full Changelog](https://github.com/openeuropa/oe_corporate_countries/compare/2.3.4...2.3.5)
