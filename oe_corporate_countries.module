@@ -6,3 +6,13 @@
  */
 
 declare(strict_types=1);
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function oe_corporate_countries_module_implements_alter(&$implementations, $hook) {
+  if ($hook === 'requirements') {
+    // We have our own version.
+    unset($implementations['sparql_entity_storage']);
+  }
+}

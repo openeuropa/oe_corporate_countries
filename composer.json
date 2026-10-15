@@ -53,6 +53,11 @@
             "locations": {
                 "web-root": "./build"
             }
+        },
+        "patches": {
+            "drupal/sparql_entity_storage": {
+                "https://git.drupalcode.org/project/sparql_entity_storage/-/work_items/3603275": "https://git.drupalcode.org/project/sparql_entity_storage/-/merge_requests/41.diff"
+            }
         }
     },
     "config": {
