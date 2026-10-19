@@ -23,7 +23,7 @@ services:
     # ports:
     #   - 3306:3306
   sparql:
-    image: fpfis/triplestore:1
+    image: tenforce/virtuoso
     environment:
     - SPARQL_UPDATE=true
     - DBA_PASSWORD=dba
